@@ -1,0 +1,32 @@
+form{
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-around;
+}
+#city{
+    all: initial;
+    font-family: 'Merriweather',sans-serif;
+    border-radius: 30px;
+    padding-left: 25px;
+    font-size: larger;
+    width: 75%;
+    height: 60px;
+    margin-right: 20px;
+    font-weight: 700;
+    background-color: white;
+    color: black;
+    border: none;
+}
+
+#submitBtn{
+    padding: 15px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    font-size: medium;
+    border: none;
+}
+#searchIcon {
+    font-size: 32px;
+}
