@@ -14,15 +14,15 @@ export default function Weather() {
         sunrise: "--",
         sunset: "--"
     });
-     
+
     let updateInfo = (result) => {
         setInfo(result);
     }
-
+    
     useEffect(() => {
         async function getWeather() {
             const apikey = '65c75343ef8f32e586ef50c93edc4383'
-            let responce = await fetch(`https://api.openweathermap.org/data/2.5/weather?appid=${apikey}&units=metric&q=Ludhiana`);
+            let responce = await fetch(`https://api.openweathermap.org/data/2.5/weather?appid=${apikey}&units=metric&q=Howrah`);
             let data = await responce.json();
 
             let option = {hour: '2-digit',minute:'2-digit'};

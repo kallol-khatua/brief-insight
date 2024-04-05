@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather");
 @import url("https://fonts.googleapis.com/css?family=Anton");
+
 *{
     padding: 0;
     margin: 0;
@@ -11,9 +12,13 @@ body{
     display: flex;
     justify-content: center;
     background-color: #222;
-    max-width: 100vw;
+    max-width: 120vw;
     overflow-y: hidden;
     padding-top: 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 @keyframes animated-shadow {
@@ -32,13 +37,22 @@ body{
 
 #root {
     padding: 20px 20px;
-    min-width: 35vw;
+    min-width: 38vw;
     /* height: 80vh; */
     border-radius: 16px;
     position: relative;
     margin-left: 15px;
     margin-right: 15px;
     background: linear-gradient(135deg, #20c0d3, #d320ab);
+}
+
+@media (max-width:808px){
+  #root {
+   
+    min-width: 70%;
+    /* height: 80vh; */
+    
+  }
 }
 
 #root::before, #root::after {
