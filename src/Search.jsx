@@ -9,28 +9,40 @@ export default function Search({updateInfo}) {
 
     
     let getWeatherInfo = async () => {
-        let responce = await fetch(url + city);
-        let data = await responce.json();
-
-        let option = {hour: '2-digit',minute:'2-digit'};
-        let unix_timestamp = data.sys.sunrise;
-        let date = new Date(unix_timestamp * 1000);
-        let sunrise = date.toLocaleTimeString(navigator.language,option);
-        unix_timestamp = data.sys.sunset;
-        date = new Date(unix_timestamp * 1000);
-        let sunset = date.toLocaleTimeString(navigator.language,option);
-
-        let result = {
-            name: data.name,
-            temp: Math.round(data.main.temp),
-            humidity: data.main.humidity,
-            windSpeed: data.wind.speed,
-            description: data.weather[0].description,
-            weatherMain: data.weather[0].main,
-            sunrise: sunrise,
-            sunset: sunset
-        };
-        return result;
+        try{
+            let responce = await fetch(url + city);
+            let data = await responce.json();
+    
+            let option = {hour: '2-digit',minute:'2-digit'};
+            let unix_timestamp = data.sys.sunrise;
+            let date = new Date(unix_timestamp * 1000);
+            let sunrise = date.toLocaleTimeString(navigator.language,option);
+            unix_timestamp = data.sys.sunset;
+            date = new Date(unix_timestamp * 1000);
+            let sunset = date.toLocaleTimeString(navigator.language,option);
+            let result = {
+                name: data.name,
+                temp: Math.round(data.main.temp),
+                humidity: data.main.humidity,
+                windSpeed: Math.round(data.wind.speed * 3.6),
+                description: data.weather[0].description.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '),
+                weatherMain: data.weather[0].main,
+                sunrise: sunrise,
+                sunset: sunset
+            };
+            return result;
+        }catch(err) {
+            return {
+                name: "City",
+                temp: "--",
+                humidity: "--",
+                windSpeed: "--",
+                description: "-- --",
+                weatherMain: "--",
+                sunrise: "--",
+                sunset: "--"
+            };
+        }
     }
 
     let handleSubmit = async (event) => {

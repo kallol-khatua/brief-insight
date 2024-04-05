@@ -31,14 +31,14 @@ body{
 }
 
 #root {
-    padding: 20px 5px;
+    padding: 20px 20px;
     min-width: 35vw;
-    height: 80vh;
+    /* height: 80vh; */
     border-radius: 16px;
     position: relative;
     margin-left: 15px;
     margin-right: 15px;
-    background: linear-gradient(135deg, #9207bd, #df0974);
+    background: linear-gradient(135deg, #20c0d3, #d320ab);
 }
 
 #root::before, #root::after {
@@ -52,7 +52,7 @@ body{
     border-radius: 20px;
     left: -3px;
     z-index: -1;
-    animation: animated-shadow 15s linear infinite alternate;
+    animation: animated-shadow 6s linear infinite alternate;
 }
 
 #root::after{

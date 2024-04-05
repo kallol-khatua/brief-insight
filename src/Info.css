@@ -1,0 +1,56 @@
+#temp{
+    text-align: center;
+    color: white;
+    font-size: 4.5rem;
+}
+
+#name{
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 15px 0px;
+}
+
+.center{
+    text-align: center;
+}
+
+.info{
+    font-size: 1.2rem;
+}
+
+#desc{
+    text-align: center;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin: 15px 0px;
+}
+
+.details{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.info{
+    font-size: 1.4rem;
+}
+
+.setrise{
+    display: flex;
+    justify-content: space-around;
+    width:100%;
+    color: white;
+    font-size: 1.9rem;
+}
+/* 
+.setrise.bottom{
+    margin-bottom: 20px;
+} */
