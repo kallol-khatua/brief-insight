@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "./Info.css"
 import LightModeIcon from '@mui/icons-material/LightMode';
 import WbTwilightIcon from '@mui/icons-material/WbTwilight';
