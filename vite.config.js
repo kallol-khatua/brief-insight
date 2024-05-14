@@ -12,8 +12,8 @@ export default defineConfig({
       },
       includeAssets: ['favicon.ico', 'robots.txt', 'apple-touch-icon.png'], // Additional static assets to include
       manifest: {
-        name: 'Weather Info',
-        short_name: 'Weather Info',
+        name: 'Brief Insight',
+        short_name: 'Brief Insight',
         description: 'Get weather info city wise.',
         theme_color: '#000000',
         background_color: '#ffffff',
@@ -43,7 +43,7 @@ export default defineConfig({
               cacheName: 'api-cache', // Custom cache name
               expiration: {
                 maxEntries: 10000, // Maximum number of entries
-                maxAgeSeconds: 60 * 60, // Maximum age of cache (1 day)
+                maxAgeSeconds: 7 * 24 * 60 * 60, // Maximum age of cache (7 day)
               },
             },
           },
